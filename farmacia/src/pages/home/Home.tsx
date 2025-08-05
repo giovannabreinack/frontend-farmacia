@@ -1,3 +1,5 @@
+import ListaCategorias from "../../components/categorias/listacategorias/ListaCategorias"
+
 function Home() {
     return (
         <>
@@ -11,6 +13,7 @@ function Home() {
                             O clique que cura!
                         </p>
                     </div>
+
                     <div className="flex justify-center">
                         <img
                             src="https://ik.imagekit.io/zddqh4rhi/ilustracao-plana-do-dia-do-medico-nacional-com-medico-e-caixa-de-primeiros-socorros.png?updatedAt=1754405822422"
@@ -20,6 +23,7 @@ function Home() {
                     </div>
                 </div>
             </div>
+            <ListaCategorias />
         </>
     )
 }
