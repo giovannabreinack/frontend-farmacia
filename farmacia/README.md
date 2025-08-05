@@ -1,69 +1,23 @@
-# React + TypeScript + Vite
+# RemédiAqui 🏥💊
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um sistema web para gerenciamento de categorias de uma farmácia, desenvolvido como parte de um projeto de estudo. O **RemédiAqui** permite criar, visualizar, atualizar e excluir categorias de produtos da farmácia, oferecendo uma interface moderna e responsiva.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologias Utilizadas
 
-## Expanding the ESLint configuration
+- **React** + **TypeScript** – Criação da interface moderna e componentizada  
+- **Tailwind CSS** – Estilização rápida e responsiva  
+- **Axios** – Comunicação com a API do backend  
+- **React Router DOM** – Navegação entre páginas  
+- **React Hooks** – Gerenciamento de estado e efeitos colaterais  
+- **API Backend (Farmácia)** – CRUD de categorias (Create, Read, Update e Delete)  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## ⚙️ Funcionalidades
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- ✅ **Cadastro de categorias** de produtos da farmácia  
+- ✅ **Listagem de categorias** em tempo real  
+- ✅ **Edição** de categorias existentes  
+- ✅ **Exclusão** de categorias   

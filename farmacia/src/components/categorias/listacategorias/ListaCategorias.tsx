@@ -1,5 +1,5 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable no-empty */
+
+
 import { useEffect, useState } from "react";
 import type Categoria from "../../../models/Categoria";
 import { buscar } from "../../../services/Service";
@@ -10,8 +10,8 @@ function ListaCategorias() {
 
     const [categorias, setCategorias] = useState<Categoria[]>([])
 
-    async function buscarCategorias() { 
-            await buscar('/categorias', setCategorias)
+    async function buscarCategorias() {
+        await buscar('/categorias', setCategorias)
     }
 
     useEffect(() => {
