@@ -1,12 +1,13 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { useEffect, useState, type ChangeEvent } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import type Categoria from "../../../models/Categoria";
 import { atualizar, buscar, cadastrar } from "../../../services/Service";
 
 function FormCategoria() {
 
+    const navigate = useNavigate();
 
     const [categoria, setCategoria] = useState<Categoria>({} as Categoria)
 
@@ -29,6 +30,10 @@ function FormCategoria() {
         })
     }
 
+    function retornar() {
+        navigate("/categorias")
+    }
+
 
     async function gerarNovaCategoria(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
@@ -41,6 +46,8 @@ function FormCategoria() {
                 alert('Erro ao atualizar a categoria.')
             }
 
+            retornar()
+
         } else {
             try {
                 await cadastrar(`/categorias`, categoria, setCategoria)
@@ -48,6 +55,7 @@ function FormCategoria() {
             } catch (error: any) {
                 alert('Erro ao cadastrar a categoria.')
             }
+            retornar()
         }
     }
 
