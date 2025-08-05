@@ -10,6 +10,7 @@ function FormCategoria() {
     const navigate = useNavigate();
 
     const [categoria, setCategoria] = useState<Categoria>({} as Categoria)
+    const [isLoading, setIsLoading] = useState<boolean>(false)
 
     const { id } = useParams<{ id: string }>();
 
@@ -37,6 +38,7 @@ function FormCategoria() {
 
     async function gerarNovaCategoria(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
+        setIsLoading(true)
 
         if (id !== undefined) {
             try {
@@ -55,6 +57,8 @@ function FormCategoria() {
             } catch (error: any) {
                 alert('Erro ao cadastrar a categoria.')
             }
+
+            setIsLoading(false)
             retornar()
         }
     }
